@@ -1,5 +1,5 @@
 body {
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     background-image: linear-gradient(rgba(230, 230, 230, .9),
             rgba(230, 230, 230, .9)), url("/IMAGES/landingPage.png");
     background-repeat: no-repeat;
@@ -43,5 +43,8 @@ body {
 @media only screen and (max-width: 600px) {
     .landing-info {
         max-width: 90%;
+    }
+    body {
+        overflow-y: visible;
     }
 }
