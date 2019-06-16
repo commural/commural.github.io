@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- CSS -->
+    <link rel=stylesheet type="text/css" href="CSS/main.css">
+    <link rel=stylesheet type="text/css" href="CSS/products.css">
+    <link rel=stylesheet type="text/css" href="CSS/animate.min.css">
+    <!-- CSS -->
+    <title>Moc Site</title>
+</head>
+
+<body>
+    <div class="logo animated fadeInDown"><a href="/"><img src="/IMAGES/Logo_sml.PNG"
+                style="max-width: 20em; min-width: 5em;" /></a></div>
+    <div class="about">
+        <div>
+            <span id="about" style="font-weight:bold; font-size:1.5em;" onclick="about_show()">About <i id="arrow" class="arrow down"></i></span>
+        </div>
+        <span id="about-content" style="font-weight:bold;" class="button-hide">
+            <br><br>
+            We’ve listened to people who want to start mural painting as a group,
+            but don’t believe they have the time or the experience to start…
+            <br><br>
+            That’s why our range of technology provides solutions focused on
+            making the art transferral step in the mural painting process
+            simpler, and less time consuming.
+            <br><br>
+            You still get to paint! It just means that your designs and ideas,
+            are replicated on the wall of your choosing without all of the hassle.
+            <br><br>
+            This also makes painting in groups an easier task,
+            as organising what goes where in your mural becomes more streamlined.
+            <br><br>
+            Depending on your budget, or if you have any electronic assembly skills;
+            you can either purchase a solution already assembled,
+            you can purchase the parts for self-assembly at a reduced cost,
+            or simply download the specifications and code to design it yourself for free!
+            <br><br>
+        </span>
+    </div>
+    <div class="user-view-parent flex-direction">
+        <div class="user-data animated fadeInLeft">
+            <h1 id="title">Dotter</h1>
+            <div class="button-list">
+
+                <select id="concept" onchange="concept_change(), change_slideShow(), change_decript()">
+                    <option value="Dotter">Dotter</option>
+                    <option value="Gridder">Gridder</option>
+                    <option value="Spinner">Spinner</option>
+                </select>
+                <select id="type" onchange="concept_change()">
+                    <option value="Assembled">Assembled</option>
+                    <option value="Self-Assembly">Self Assembly</option>
+                    <option value="Develop-yourself">Develop yourself</option>
+                </select>
+
+                <!-- Acces Gridder only -->
+                <select id="g-addons" class="button-hide" onchange="concept_change()">
+                    <option value="no-addons">No Addons</option>
+                    <option value="stand">Motorised Stand</option>
+                </select>
+            </div>
+            <span id="stand-disclaimer" class="button-hide">
+                <br>
+                Add-on stand for independent positioning.<br><br>
+                This electronic stand can lift Gridder up and down across your wall
+                to further take the hassle out of artwork referencing.
+                <br><br>
+            </span>
+            <div class="button-list">
+                <button id="download-instr" class="button-hide">Download Instructions</button>
+                <button id="download-code" class="button-hide">Download Code</button>
+                <button id="download-parts" class="button-hide">Download Parts Sheet</button>
+                <button id="download-g-code" class="button-hide">Download G-Code</button>
+            </div>
+            <span id="disclaimer" class="button-hide">
+                <br>
+                By designing yourself, you don’t have to pay for anything!<br>
+                By agreeing to our open-source license;<br>
+                below, you can download design specifications, STL models for 3D printing parts,
+                a parts list with all OEM components and locations where you can order them,
+                and an instruction manual for our suggested assembly methods.
+                <br><br>
+                We believe in creating a community of designers and painters who are passionate
+                about our objectives and want to encourage everyone to get involved in making
+                their own contributions wherever possible!
+                <br><br>
+            </span>
+            <div class="button-list">
+                <span id="price" style="font-size: 2.5em; padding-bottom: 0.2em;">$59.00</span>
+                <button id="buynow">Buy Now</button>
+            </div>
+            <div class="decri-show">
+                <span id="decription">
+                    <br>
+                    Dotter is a compact and simple solution to artwork referencing.<br>
+                    It assists with the art transferral process of replicating your designs for big surfaces!<br>
+                    <br>
+                    Simply load your artwork as a digital file onto its internal storage;<br>
+                    Set the scale you wish to replicate your artwork.<br>
+                    Next, place a pen, pencil, marker, or anything else you draw with into its central grasp.<br><br>
+                    Place dotter against your target surface and designate where you want the center of
+                    the design to be located. As you rub dotter across the surface, it will draw dots as
+                    reference points for your image.<br><br>
+                    All you need to do is connect the dots, and your set to paint!<br><br>
+                    Dotter’s accurate referencing system allows you to set up linework for your art fast
+                    and accurately, allowing you and your collaborators to paint without mistakes.<br>
+
+                </span>
+            </div>
+        </div>
+        <div class="user-data-img animated fadeInRight">
+            <div id="SpinnerSlides" class="slideshow">
+                <div class="slide active">
+                    <img class="img" src="IMAGES/Spinner/Spinner_A.png" />
+                </div>
+                <div class="slide active">
+                    <img class="img" src="IMAGES/Spinner/Spinner_B.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Spinner/Spinner_C.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Spinner/Spinner_D.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Spinner/Spinner_E.png" />
+                </div>
+            </div>
+            <div id="GridderSlides" class="slideshow">
+                <div class="slide active">
+                    <img class="img" src="IMAGES/Gridder/Gridder_A.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Gridder/Gridder_B.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Gridder/Gridder_C.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Gridder/Gridder_D.png" />
+                </div>
+                <div class="slide active">
+                    <img class="img" src="IMAGES/Gridder/Gridder_E.png" />
+                </div>
+            </div>
+            <div id="DotterSlides" class="slideshow">
+                <div class="slide active">
+                    <img class="img" src="IMAGES/Dotter/Dotter_A.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Dotter/Dotter_AB.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Dotter/Dotter_B.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Dotter/Dotter_C.png" />
+                </div>
+                <div class="slide">
+                    <img class="img" src="IMAGES/Dotter/Dotter_D.png" />
+                </div>
+            </div>
+        </div>
+        <div class="user-data mobile-decript animated fadeInLeft decri-hide">
+            <span id="decription">
+                Dotter is a compact and simple solution to artwork referencing.<br>
+                It assists with the art transferral process of replicating your designs for big surfaces!<br>
+                <br>
+                Simply load your artwork as a digital file onto its internal storage;<br>
+                Set the scale you wish to replicate your artwork.<br>
+                Next, place a pen, pencil, marker, or anything else you draw with into its central grasp.<br><br>
+                Place dotter against your target surface and designate where you want the center of
+                the design to be located. As you rub dotter across the surface, it will draw dots as
+                reference points for your image.<br><br>
+                All you need to do is connect the dots, and your set to paint!<br><br>
+                Dotter’s accurate referencing system allows you to set up linework for your art fast
+                and accurately, allowing you and your collaborators to paint without mistakes.<br>
+
+            </span>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Copyright © Daniel Marin 2019</span>
+    </div>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="JS/slideshow.js"></script>
+</body>
+
+</html>

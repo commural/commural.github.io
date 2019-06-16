@@ -1,0 +1,47 @@
+body {
+    /* overflow-y: hidden; */
+    background-image: linear-gradient(rgba(230, 230, 230, .9),
+            rgba(230, 230, 230, .9)), url("/IMAGES/landingPage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.user-view-parent {
+    min-height: 100vh;
+    width: inherit;
+}
+
+.user-data {
+    width: 90vw;
+}
+
+.user-nav {
+    animation-delay: 0.3s;
+    padding: 2em;
+}
+.landing-info {
+    padding-bottom: .5em;
+    font-size: 1.5em;
+    max-width: 40%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1600px) {
+    .landing-info {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .landing-info {
+        max-width: 80%;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .landing-info {
+        max-width: 90%;
+    }
+}
