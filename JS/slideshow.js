@@ -10,10 +10,10 @@ var spinnerDecript = "<br>Spinner is the robotic arm that gives you a hand with 
 
 function slideshow() {
     // console.log('Running');
-    slides.filter('.active').fadeOut(700).removeClass('active');
-    slides.eq(index).delay(700).fadeIn(700).addClass('active');
+    slides.filter('.active').fadeOut(400).removeClass('active');
+    slides.eq(index).delay(400).fadeIn(400).addClass('active');
     index = (index + 1) % slides.length;
-    setTimeout(slideshow, 4000);
+    setTimeout(slideshow, 3000);
 }
 
 window.onload = slideshow();
@@ -32,6 +32,7 @@ function change_slideShow() {
 
 function change_decript(){
     var concept = $("#concept").children("option:selected").val();
+    console.log('Changing');
     decription(concept);
 }
 
@@ -136,15 +137,25 @@ function download(type) {
 
 function decription(concept) {
     var decript = $("#decription");
+    var decript_mob = $("#decription-mobile");
     if (concept == "Dotter") {
+        decript_mob.fadeOut(0);
+        decript_mob.delay(500).html(dotterDecript);
+        decript_mob.delay(500).fadeIn(500);
         decript.fadeOut(0);
         decript.delay(500).html(dotterDecript);
         decript.delay(500).fadeIn(500);
     } else if (concept == "Gridder") {
+        decript_mob.fadeOut(0);
+        decript_mob.delay(500).html(gridderDecript);
+        decript_mob.delay(500).fadeIn(500);
         decript.fadeOut(0);
         decript.delay(500).html(gridderDecript);
         decript.delay(500).fadeIn(500);
     } else if (concept == "Spinner") {
+        decript_mob.fadeOut(0);
+        decript_mob.delay(500).html(spinnerDecript);
+        decript_mob.delay(500).fadeIn(500);
         decript.fadeOut(0);
         decript.delay(500).html(spinnerDecript);
         decript.delay(500).fadeIn(500);
