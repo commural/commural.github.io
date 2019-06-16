@@ -43,11 +43,11 @@ function concept_change() {
     addons(concept);
     change_price(concept, type, stand);
     download(type);
-    stand_info(stand);
+    stand_info(concept, stand);
 }
 
-function stand_info(stand){
-    if (stand == "stand") {
+function stand_info(concept, stand){
+    if (stand == "stand" && concept == 'Gridder') {
         $('#stand-disclaimer').fadeIn(500).addClass('active');
     } else {
         $('#stand-disclaimer').fadeOut(500).removeClass('active');

@@ -141,6 +141,9 @@ h1 {
     .img {
         max-height: 37.500em;
     }
+    .about{
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 1025px) {
@@ -195,5 +198,8 @@ h1 {
     .img {
         margin-left: 0;
         max-height: 25em;
+    }
+    .about{
+        width: 90%;
     }
 }
